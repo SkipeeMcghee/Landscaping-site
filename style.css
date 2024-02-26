@@ -1,5 +1,5 @@
 /* Reset some basic elements */
-body, h1, h2, p, ul {
+body, h1, h2, p, ul, blockquote {
     margin: 0;
     padding: 0;
 }
@@ -12,6 +12,19 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: auto;
+}
+
+.promotion-banner {
+    background-color: #ff0000; /* Bright red for visibility */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: -20px -20px 20px -20px; /* Extend to the edges */
+}
+
+header, footer, .promotion-banner {
+    width: calc(100% + 40px);
+    margin-left: -20px;
 }
 
 header {
@@ -29,13 +42,13 @@ header p {
     font-style: italic;
 }
 
-section#contact {
+section#contact, section#testimonials, section#gallery {
     background: #fff;
     padding: 20px;
     margin: 20px 0;
 }
 
-section#contact h2 {
+section h2 {
     color: #006400;
 }
 
@@ -43,16 +56,35 @@ section#contact ul {
     list-style: none;
 }
 
-section#contact ul li {
+section#contact ul li, section#testimonials blockquote {
     background: #e4e4e4;
     margin: 10px 0;
     padding: 10px;
+}
+
+blockquote {
+    margin: 20px;
+    padding: 10px;
+    background: #e4e4e4;
+    border-left: 5px solid #006400;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+section#gallery img {
+    width: 100%;
+    height: auto;
+    padding: 10px 0; /* Add space around images */
 }
 
 footer {
     text-align: center;
     padding: 20px;
     background: #006400;
-    color: #fff;
-}
-
+    color: white;
