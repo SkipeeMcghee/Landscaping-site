@@ -5,32 +5,36 @@ body, h1, h2, p, ul, blockquote {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
 }
 
 .promotion-banner {
-    background-color: #ff0000; /* Bright red for visibility */
-    color: white;
+    background-color: #20b910; /* Bright red for visibility */
+    color: rgb(11, 111, 11);
     text-align: center;
-    padding: 10px;
-    margin: -20px -20px 20px -20px; /* Extend to the edges */
+    padding: 20px; /* Increased padding for more emphasis */
+    font-size: 1.5em; /* Larger text */
+    margin: 0 auto; /* Extend to the edges */
 }
 
-header, footer, .promotion-banner {
-    width: calc(100% + 40px);
-    margin-left: -20px;
+header, footer {
+    text-align: center;
+    background: #006400;
+    color: #fff;
+    padding: 20px 0;
+    margin: 0; /* Extend to the edges */
 }
 
 header {
     text-align: center;
     background: #006400;
-    color: #fff;
+    color: #ffffff;
     padding: 20px 0;
 }
 
@@ -56,17 +60,26 @@ section#contact ul {
     list-style: none;
 }
 
-section#contact ul li, section#testimonials blockquote {
+section#contact ul li {
     background: #e4e4e4;
     margin: 10px 0;
     padding: 10px;
 }
 
+section#testimonials {
+    background: #fff; /* Keep the background white for a clean look */
+    padding: 40px 20px;
+    margin: 20px 0;
+    border: none; /* Remove borders */
+}
+
 blockquote {
-    margin: 20px;
-    padding: 10px;
-    background: #e4e4e4;
-    border-left: 5px solid #006400;
+    font-style: italic;
+    margin: 40px 0;
+    padding: 20px; /* Add some padding for the text */
+    border-left: 5px solid #e8e8e8; /* A subtle accent without a full box */
+    background-color: transparent; /* Remove the gray background */
+    color: #555; /* Slightly softer text color for elegance */
 }
 
 section#gallery img {
@@ -77,7 +90,42 @@ section#gallery img {
 
 footer {
     text-align: center;
+    font-size: 20px;
     padding: 20px;
     background: #006400;
     color: white;
+}
+
+.grid-container {
+    display: grid;
+    gap: 40px; /* Adjust the space between grid items */
+    padding: 10px; /* Padding around the grid */
+    box-sizing: border-box;
+  }
+
+  .grid-item {
+    padding: 50px; /* Padding inside each item */
+    font-family: Arial, sans-serif; /* Optional: Change the font family */
+  }
+
+
+  
+  /* For desktops and devices wider than 768px */
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    }
+  }
+  
+  /* For mobile devices and devices narrower than 768px */
+  @media (max-width: 767px) {
+    .grid-container {
+      grid-template-rows: auto auto auto; /* Creates three rows */
+    }
+  }
+  
+.grid-title {
+    text-align: center;
+    font-size: x-large;
+    color: #006400;
 }
