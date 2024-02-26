@@ -69,14 +69,6 @@ blockquote {
     border-left: 5px solid #006400;
 }
 
-blockquote:before {
-    content: open-quote;
-}
-
-blockquote:after {
-    content: close-quote;
-}
-
 section#gallery img {
     width: 100%;
     height: auto;
@@ -88,3 +80,4 @@ footer {
     padding: 20px;
     background: #006400;
     color: white;
+}
